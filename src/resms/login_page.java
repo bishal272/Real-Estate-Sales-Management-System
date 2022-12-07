@@ -46,7 +46,6 @@ public class login_page extends javax.swing.JFrame {
         pass_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pass_label.setText("Password");
 
-        login_button.setBackground(new java.awt.Color(0, 102, 255));
         login_button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         login_button.setForeground(new java.awt.Color(0, 0, 0));
         login_button.setText("Login");
@@ -61,7 +60,6 @@ public class login_page extends javax.swing.JFrame {
         id_field.setBackground(new java.awt.Color(255, 255, 255));
         id_field.setName(""); // NOI18N
 
-        register_button.setBackground(new java.awt.Color(0, 102, 255));
         register_button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         register_button.setForeground(new java.awt.Color(0, 0, 0));
         register_button.setText("Register");
@@ -72,7 +70,7 @@ public class login_page extends javax.swing.JFrame {
         });
 
         title_label.setBackground(new java.awt.Color(0, 0, 0));
-        title_label.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        title_label.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         title_label.setForeground(new java.awt.Color(0, 0, 0));
         title_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title_label.setText("WELCOME TO MAGIC PROPERTY");
@@ -96,24 +94,24 @@ public class login_page extends javax.swing.JFrame {
                         .addGap(63, 63, 63)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(id_field, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-                            .addComponent(pass_field)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(161, 161, 161)
-                        .addComponent(title_label)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                            .addComponent(pass_field))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 162, Short.MAX_VALUE)
+                .addComponent(title_label)
+                .addGap(155, 155, 155))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addComponent(title_label)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(id_field, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(id_label, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -147,7 +145,16 @@ public class login_page extends javax.swing.JFrame {
 
             String check_st="select * from loginData where agent_id=? and pass=? ";
             String u=id_field.getText();
+            if(u.isEmpty()){
+                info_message("Provide username please!","Alert!",2);
+                return;
+            }
+            
             String p=pass_field.getText();
+            if(p.isEmpty()){
+                info_message("Provide password please!","Alert!",2);
+                return;
+            }
             PreparedStatement check=conn.c.prepareStatement(check_st);//using connection variable from conn object
             check.setString(1,u);
             check.setString(2,p);
@@ -169,6 +176,8 @@ public class login_page extends javax.swing.JFrame {
 
     private void register_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_register_buttonMouseClicked
         // TODO add your handling code here:
+        new register_page().setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_register_buttonMouseClicked
 
     public static void main(String args[]) {
