@@ -1,6 +1,8 @@
 
 package resms;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author b54u
@@ -177,7 +179,7 @@ public class register_page extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void register_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_register_buttonMouseClicked
-        
+        JOptionPane.showMessageDialog(null,"Registered Successfully","Success",JOptionPane.INFORMATION_MESSAGE);
         
     }//GEN-LAST:event_register_buttonMouseClicked
 
