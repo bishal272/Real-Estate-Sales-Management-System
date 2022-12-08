@@ -65,15 +65,15 @@
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="back_button" min="-2" pref="106" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="pass" min="-2" pref="284" max="-2" attributes="0"/>
-                              <Component id="user_name" min="-2" pref="284" max="-2" attributes="0"/>
-                              <Component id="last_name" min="-2" pref="284" max="-2" attributes="0"/>
-                              <Component id="first_name" min="-2" pref="284" max="-2" attributes="0"/>
-                              <Component id="location" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="pass_field" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="user_name_field" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="last_name_field" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="first_name_field" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="location_field" min="-2" pref="284" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="121" max="32767" attributes="0"/>
+                  <EmptySpace pref="145" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -85,26 +85,26 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="first_name_label" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="first_name" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="first_name_field" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="last_name_label" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="last_name" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="last_name_field" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="location" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="location_field" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="location_label" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="user_name" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="user_name_field" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="user_label" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="pass" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="pass_field" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="pass_label" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -190,35 +190,35 @@
             <Property name="text" type="java.lang.String" value="User Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="first_name">
+        <Component class="javax.swing.JTextField" name="first_name_field">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="last_name">
+        <Component class="javax.swing.JTextField" name="last_name_field">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="user_name">
+        <Component class="javax.swing.JTextField" name="user_name_field">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="pass">
+        <Component class="javax.swing.JTextField" name="pass_field">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="location">
+        <Component class="javax.swing.JTextField" name="location_field">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
