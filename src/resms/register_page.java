@@ -12,7 +12,6 @@ public class register_page extends javax.swing.JFrame {
 
     mysqlcon conn=new mysqlcon();
     public register_page() {
-       
         initComponents();
     }
 
@@ -218,11 +217,14 @@ public class register_page extends javax.swing.JFrame {
             in2.setString(2, p);
             in2.execute();
             info_message("inserted in login_data table","Alert!",1);
+            info_message("Registered Successfully","Success",1);
+            setVisible(false);
+            new login_page().setVisible(true);
         }
         catch(SQLException ex){
              System.out.println(ex);
         }
-        JOptionPane.showMessageDialog(null,"Registered Successfully","Success",JOptionPane.INFORMATION_MESSAGE);
+        
         
     }//GEN-LAST:event_register_buttonMouseClicked
 

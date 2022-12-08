@@ -164,6 +164,8 @@ public class login_page extends javax.swing.JFrame {
             }
             else{
                 info_message("logged in!","Alert!",1);
+                new Main_page().setVisible(true);
+                setVisible(false);
             }
 
         }
