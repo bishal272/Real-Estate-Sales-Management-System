@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class login_page extends javax.swing.JFrame {
 
-    mysqlcon conn= new mysqlcon();
+  
     
     public login_page() {
         initComponents();
@@ -139,7 +139,7 @@ public class login_page extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    mysqlcon conn= new mysqlcon();
     private void login_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_buttonMouseClicked
         try{
 
@@ -194,6 +194,7 @@ public class login_page extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,message,title,JOptionPane.WARNING_MESSAGE);
 
     }
+     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField id_field;
