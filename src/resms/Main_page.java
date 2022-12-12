@@ -4,6 +4,11 @@
  */
 package resms;
 
+import resms.clients.clients_add;
+import resms.property.property_images;//import package.file_name
+import resms.property.property_add;
+import resms.owner.owner_page;
+
 /**
  *
  * @author b54u
@@ -172,7 +177,7 @@ public class Main_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        new clients_page().setVisible(true);
+        new clients_add().setVisible(true);
     }//GEN-LAST:event_jButton5MouseClicked
 
     

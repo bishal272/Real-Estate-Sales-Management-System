@@ -1,8 +1,10 @@
-package resms;
+package resms.auth;
 import javax.swing.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import resms.Main_page;
+import resms.mysqlcon;
 
 public class login_page extends javax.swing.JFrame {
 

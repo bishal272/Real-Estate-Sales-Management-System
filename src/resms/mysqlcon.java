@@ -2,7 +2,7 @@ package resms;
 import java.sql.*;
 
     public class mysqlcon{
-        Connection c;
+        public Connection c;
         Statement s;
         public mysqlcon(){
 

@@ -1,8 +1,10 @@
 
-package resms;
+package resms.auth;
 
+import resms.auth.login_page;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import resms.mysqlcon;
 
 /**
  *
@@ -232,7 +234,7 @@ public class register_page extends javax.swing.JFrame {
         setVisible(false);
         new login_page().setVisible(true);
     }//GEN-LAST:event_back_buttonMouseClicked
-public void info_message(String message, String title,int c){
+    public void info_message(String message, String title,int c){
         if(c==1)
             JOptionPane.showMessageDialog(null,message,title,JOptionPane.INFORMATION_MESSAGE);
         else if(c==2)
