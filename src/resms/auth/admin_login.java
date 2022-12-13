@@ -4,13 +4,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import resms.Main_page;
+import resms.admin_management_page;
 import resms.mysqlcon;
 
-public class login_page extends javax.swing.JFrame {
+public class admin_login extends javax.swing.JFrame {
 
   
     
-    public login_page() {
+    public admin_login() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -41,7 +42,7 @@ public class login_page extends javax.swing.JFrame {
         id_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         id_label.setForeground(new java.awt.Color(0, 0, 0));
         id_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        id_label.setText("Agent ID");
+        id_label.setText("Login");
 
         pass_label.setBackground(new java.awt.Color(0, 0, 0));
         pass_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -167,7 +168,7 @@ public class login_page extends javax.swing.JFrame {
             }
             else{
                 info_message("logged in!","Alert!",1);
-                new Main_page().setVisible(true);
+                new admin_management_page().setVisible(true);
                 setVisible(false);
             }
 
@@ -187,7 +188,7 @@ public class login_page extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         
-        new login_page().setVisible(true);
+        new admin_login().setVisible(true);
             
     }
    public void info_message(String message, String title,int c){

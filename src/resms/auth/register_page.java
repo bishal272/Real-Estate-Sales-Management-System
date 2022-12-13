@@ -1,7 +1,7 @@
 
 package resms.auth;
 
-import resms.auth.login_page;
+import resms.auth.admin_login;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import resms.mysqlcon;
@@ -222,7 +222,7 @@ public class register_page extends javax.swing.JFrame {
             info_message("inserted in login_data table","Alert!",1);
             info_message("Registered Successfully","Success",1);
             setVisible(false);
-            new login_page().setVisible(true);
+            new admin_login().setVisible(true);
         }
         catch(SQLException ex){
              System.out.println(ex);
@@ -233,7 +233,7 @@ public class register_page extends javax.swing.JFrame {
 
     private void back_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_buttonMouseClicked
         setVisible(false);
-        new login_page().setVisible(true);
+        new admin_login().setVisible(true);
     }//GEN-LAST:event_back_buttonMouseClicked
     public void info_message(String message, String title,int c){
         if(c==1)
