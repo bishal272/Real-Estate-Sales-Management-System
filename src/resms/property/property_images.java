@@ -15,6 +15,7 @@ public class property_images extends javax.swing.JFrame {
      */
     public property_images() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

@@ -15,6 +15,7 @@ public class sales_page extends javax.swing.JFrame {
      */
     public sales_page() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

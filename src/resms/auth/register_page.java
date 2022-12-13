@@ -15,6 +15,7 @@ public class register_page extends javax.swing.JFrame {
     mysqlcon conn=new mysqlcon();
     public register_page() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

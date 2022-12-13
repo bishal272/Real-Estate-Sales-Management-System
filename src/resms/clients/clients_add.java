@@ -15,6 +15,7 @@ public class clients_add extends javax.swing.JFrame {
      */
     public clients_add() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

@@ -19,6 +19,7 @@ public class property_add extends javax.swing.JFrame {
      */
     public property_add() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

@@ -20,6 +20,7 @@ public class Main_page extends javax.swing.JFrame {
      */
     public Main_page() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

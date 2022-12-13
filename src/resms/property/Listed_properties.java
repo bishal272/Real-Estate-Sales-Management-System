@@ -20,6 +20,7 @@ public class Listed_properties extends javax.swing.JFrame {
     public Listed_properties() {
         
         initComponents();
+        setLocationRelativeTo(null);
         showTable();
     }
 
