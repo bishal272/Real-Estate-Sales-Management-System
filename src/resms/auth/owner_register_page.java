@@ -10,10 +10,10 @@ import resms.mysqlcon;
  *
  * @author b54u
  */
-public class admin_register_page extends javax.swing.JFrame {
+public class owner_register_page extends javax.swing.JFrame {
 
     mysqlcon conn=new mysqlcon();
-    public admin_register_page() {
+    public owner_register_page() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -40,7 +40,6 @@ public class admin_register_page extends javax.swing.JFrame {
         pass_field = new javax.swing.JTextField();
         location_field = new javax.swing.JTextField();
         register_button = new javax.swing.JButton();
-        back_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -49,7 +48,7 @@ public class admin_register_page extends javax.swing.JFrame {
         register_label.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         register_label.setForeground(new java.awt.Color(0, 0, 0));
         register_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        register_label.setText("Admin Registration");
+        register_label.setText("Owner Registration");
 
         last_name_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         last_name_label.setForeground(new java.awt.Color(0, 0, 0));
@@ -96,14 +95,6 @@ public class admin_register_page extends javax.swing.JFrame {
             }
         });
 
-        back_button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        back_button.setText("Go back");
-        back_button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                back_buttonMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -117,21 +108,20 @@ public class admin_register_page extends javax.swing.JFrame {
                     .addComponent(user_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pass_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(register_button, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(back_button, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(user_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(last_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(first_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(location_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(location_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(register_button, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(145, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(register_label, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(224, 224, 224))
+                .addGap(228, 228, 228))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,9 +149,7 @@ public class admin_register_page extends javax.swing.JFrame {
                     .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pass_label, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(back_button, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(register_button, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(register_button, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -207,14 +195,14 @@ public class admin_register_page extends javax.swing.JFrame {
                 info_message("Provide location please!","Alert!",2);
                 return;
             }
-            PreparedStatement in=conn.c.prepareStatement("insert into admin values(?,?,?,?)");
+            PreparedStatement in=conn.c.prepareStatement("insert into owner values(?,?,?,?)");
             in.setString(1, u);
             in.setString(2, f);
             in.setString(3, l);
             in.setString(4, lc);
             in.execute();
             info_message("inserted in agent table","Alert!",1);
-            PreparedStatement in2=conn.c.prepareStatement("insert into admin_login_data values(?,?)");
+            PreparedStatement in2=conn.c.prepareStatement("insert into owner_login_data values(?,?)");
             in2.setString(1, u);
             in2.setString(2, p);
             in2.execute();
@@ -229,11 +217,6 @@ public class admin_register_page extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_register_buttonMouseClicked
-
-    private void back_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_buttonMouseClicked
-        dispose();
-        
-    }//GEN-LAST:event_back_buttonMouseClicked
     public void info_message(String message, String title,int c){
         if(c==1)
             JOptionPane.showMessageDialog(null,message,title,JOptionPane.INFORMATION_MESSAGE);
@@ -246,12 +229,11 @@ public class admin_register_page extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-                new admin_register_page().setVisible(true);
+                new owner_register_page().setVisible(true);
             }
        
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back_button;
     private javax.swing.JTextField first_name_field;
     private javax.swing.JLabel first_name_label;
     private javax.swing.JPanel jPanel1;

@@ -50,7 +50,7 @@ public class owner_main_page extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Main Menu");
+        jLabel1.setText("Owner Menu");
 
         jButton2.setText("Add Property Images");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
