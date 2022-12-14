@@ -9,7 +9,7 @@ import resms.auth.admin_register_page;
 import resms.clients.edit_clients;
 import resms.property.property_images;//import package.file_name
 import resms.owner.owner_add;
-import resms.property.edit_property;
+import resms.property.Listed_properties;
 
 /**
  *
@@ -176,7 +176,7 @@ public class admin_mgmt_page extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        new edit_property().setVisible(true);
+        new Listed_properties().setVisible(true);
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
