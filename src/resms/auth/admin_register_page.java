@@ -10,10 +10,10 @@ import resms.mysqlcon;
  *
  * @author b54u
  */
-public class register_page extends javax.swing.JFrame {
+public class admin_register_page extends javax.swing.JFrame {
 
     mysqlcon conn=new mysqlcon();
-    public register_page() {
+    public admin_register_page() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -42,7 +42,7 @@ public class register_page extends javax.swing.JFrame {
         register_button = new javax.swing.JButton();
         back_button = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
 
@@ -232,8 +232,8 @@ public class register_page extends javax.swing.JFrame {
     }//GEN-LAST:event_register_buttonMouseClicked
 
     private void back_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_buttonMouseClicked
-        setVisible(false);
-        new admin_login().setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_back_buttonMouseClicked
     public void info_message(String message, String title,int c){
         if(c==1)
@@ -247,7 +247,7 @@ public class register_page extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-                new register_page().setVisible(true);
+                new admin_register_page().setVisible(true);
             }
        
 

@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import resms.owner.owner_main_page;
 import resms.mysqlcon;
 import java.sql.*;
+import resms.welcome_page;
 
 /**
  *
@@ -20,6 +21,7 @@ public class owner_login extends javax.swing.JFrame {
      */
     public owner_login() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -38,11 +40,14 @@ public class owner_login extends javax.swing.JFrame {
         pass_label = new javax.swing.JLabel();
         pass_field = new javax.swing.JTextField();
         login_button = new javax.swing.JButton();
-        back_button = new javax.swing.JButton();
+        back_button1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Owner Login");
 
@@ -72,12 +77,12 @@ public class owner_login extends javax.swing.JFrame {
             }
         });
 
-        back_button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        back_button.setForeground(new java.awt.Color(0, 0, 0));
-        back_button.setText("Go back");
-        back_button.addMouseListener(new java.awt.event.MouseAdapter() {
+        back_button1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        back_button1.setForeground(new java.awt.Color(0, 0, 0));
+        back_button1.setText("Go back");
+        back_button1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                back_buttonMouseClicked(evt);
+                back_button1MouseClicked(evt);
             }
         });
 
@@ -99,8 +104,8 @@ public class owner_login extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addComponent(login_button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(109, 109, 109)
-                        .addComponent(back_button, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(113, 113, 113)
+                        .addComponent(back_button1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(82, 82, 82))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(199, 199, 199)
@@ -126,7 +131,7 @@ public class owner_login extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(login_button, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(back_button, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(back_button1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
 
@@ -179,11 +184,11 @@ public class owner_login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_login_buttonMouseClicked
 
-    private void back_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_buttonMouseClicked
-        // TODO add your handling code here:
-        new register_page().setVisible(true);
-        setVisible(false);
-    }//GEN-LAST:event_back_buttonMouseClicked
+    private void back_button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_button1MouseClicked
+        dispose();
+        new welcome_page().setVisible(true);
+        
+    }//GEN-LAST:event_back_button1MouseClicked
 public void info_message(String message, String title,int c){
         if(c==1)
             JOptionPane.showMessageDialog(null,message,title,JOptionPane.INFORMATION_MESSAGE);
@@ -227,7 +232,7 @@ public void info_message(String message, String title,int c){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back_button;
+    private javax.swing.JButton back_button1;
     private javax.swing.JTextField id_field;
     private javax.swing.JLabel id_label;
     private javax.swing.JLabel jLabel1;

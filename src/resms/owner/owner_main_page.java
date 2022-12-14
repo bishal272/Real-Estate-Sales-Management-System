@@ -5,10 +5,10 @@
 package resms.owner;
 
 import resms.*;
-import resms.clients.clients_add;
+import resms.clients.edit_clients;
 import resms.property.property_images;//import package.file_name
 import resms.property.property_add;
-import resms.owner.owner_page;
+import resms.owner.owner_add;
 
 /**
  *

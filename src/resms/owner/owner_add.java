@@ -10,19 +10,19 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import resms.Main_page;
+import resms.agent.agent_main_page;
 import resms.mysqlcon;
 
 /**
  *
  * @author b54u
  */
-public class owner_page extends javax.swing.JFrame {
+public class owner_add extends javax.swing.JFrame {
 
     /**
      * Creates new form owner_page
      */
-    public owner_page() {
+    public owner_add() {
         initComponents();
         showTable();
         setLocationRelativeTo(null);
@@ -48,7 +48,6 @@ public class owner_page extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         ownertable = new javax.swing.JTable();
 
@@ -84,13 +83,6 @@ public class owner_page extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Main Menu");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-
         ownertable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -123,9 +115,7 @@ public class owner_page extends javax.swing.JFrame {
                             .addComponent(phone_field, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
@@ -158,9 +148,7 @@ public class owner_page extends javax.swing.JFrame {
                             .addComponent(email_field, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(34, 34, 34)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(93, 93, 93))
         );
@@ -222,11 +210,6 @@ public class owner_page extends javax.swing.JFrame {
              System.out.println(ex);
         }
     }//GEN-LAST:event_jButton3MouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        new Main_page().setVisible(true);
-        setVisible(false);
-    }//GEN-LAST:event_jButton1MouseClicked
   public void info_message(String message, String title,int c){
         if(c==1)
             JOptionPane.showMessageDialog(null,message,title,JOptionPane.INFORMATION_MESSAGE);
@@ -258,14 +241,13 @@ public class owner_page extends javax.swing.JFrame {
     }
     public static void main(String args[]) {
         
-                new owner_page().setVisible(true);
+                new owner_add().setVisible(true);
             }
       
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField email_field;
     private javax.swing.JTextField firstname_field;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
