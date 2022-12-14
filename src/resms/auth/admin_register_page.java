@@ -192,7 +192,7 @@ public class admin_register_page extends javax.swing.JFrame {
                 return;
             }
             
-            PreparedStatement in=conn.c.prepareStatement("insert into admin values(?,?,?,?)");
+            PreparedStatement in=conn.c.prepareStatement("insert into admin_table values(?,?,?,?)");
             
             in.setString(2, f);
             in.setString(3, l);

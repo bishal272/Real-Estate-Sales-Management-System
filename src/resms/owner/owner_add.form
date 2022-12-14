@@ -44,25 +44,45 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jLabel7" min="-2" pref="102" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="firstname_field" min="-2" pref="248" max="-2" attributes="0"/>
-                              <Component id="email_field" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
-                              <Component id="lastname_field" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
-                              <Component id="phone_field" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel5" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="firstname_field" min="-2" pref="248" max="-2" attributes="0"/>
+                                      <Component id="lastname_field" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel8" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Component id="user_name_field" min="-2" pref="248" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel10" min="-2" pref="102" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel6" alignment="1" min="-2" pref="102" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" min="-2" pref="102" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="email_field" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                                      <Component id="phone_field" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                                      <Component id="pass_field" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                           <Component id="jButton3" min="-2" pref="137" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -83,8 +103,12 @@
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="jLabel9" pref="77" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jScrollPane1" min="-2" pref="347" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="firstname_field" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel5" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
@@ -94,7 +118,17 @@
                               <Component id="jLabel3" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                               <Component id="lastname_field" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="user_name_field" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel10" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="pass_field" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="phone_field" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel6" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
@@ -104,12 +138,11 @@
                               <Component id="email_field" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jButton3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane1" min="-2" pref="347" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -205,6 +238,28 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="jLabel8">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="User name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="user_name_field">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel10">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Password:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="pass_field">
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
