@@ -4,7 +4,7 @@
  */
 package resms;
 
-import resms.agent.appointments;
+import resms.agent.assigned_properties;
 import resms.auth.admin_register_page;
 import resms.clients.edit_clients;
 import resms.property.property_images;//import package.file_name
@@ -188,7 +188,7 @@ public class admin_mgmt_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        new appointments().setVisible(true);
+        new assigned_properties().setVisible(true);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
