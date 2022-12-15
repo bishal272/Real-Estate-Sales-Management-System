@@ -204,11 +204,11 @@ public class owner_add extends javax.swing.JFrame {
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         try{
             String em=email_field.getText();
-            String p=phone_field.getText();
+            String ph=phone_field.getText();
             String f=firstname_field.getText();
             String l=lastname_field.getText();
-            String pass=pass_field.getText();
-            String user_name=user_name_field.getText();
+            String p=pass_field.getText();
+            String u=user_name_field.getText();
             
             if(f.isEmpty()){
                 info_message("Provide first name please!","Alert!",2);
@@ -226,22 +226,28 @@ public class owner_add extends javax.swing.JFrame {
                 info_message("Provide email please!","Alert!",2);
                 return;
             }
-            String stmt="insert into owner(first_name,last_name,owner_user_name,password,phone,email) values(?,?,?,?,?,?)";
+            String stmt="insert into owner(first_name,last_name,owner_user_name,phone,email) values(?,?,?,?,?)";
             PreparedStatement in=conn.c.prepareStatement(stmt);
             in.setString(1, f);
             in.setString(2, l);
-            in.setString(3, user_name);
-            in.setString(4, pass);
-            in.setString(5, p);
-            in.setString(6, em);
+            in.setString(3, u);
+            in.setString(4, ph);
+            in.setString(5, em);
             if(in.executeUpdate()>0){
+                
+                PreparedStatement in2=conn.c.prepareStatement("insert into owner_login_data values(?,?)");
+                in2.setString(1, u);
+                in2.setString(2, p);
+                in2.execute();
                 info_message("list updated","success",1);
                 DefaultTableModel tbl=(DefaultTableModel)ownertable.getModel();
                 tbl.setRowCount(0);
                 showTable();
+                
             }
             else
                 info_message("not updated error","alert",2);
+            
            
             
         }
@@ -264,9 +270,10 @@ public class owner_add extends javax.swing.JFrame {
                 String id=rs.getString("owner_id");
                 String f=rs.getString("first_name");
                 String l=rs.getString("last_name");
+                String u=rs.getString("owner_user_name");
                 String p=rs.getString("phone");
                 String em=rs.getString("email");
-                String tbldata[]={id,f,l,p,em};
+                String tbldata[]={id,f,l,u,p,em};
                 
                 DefaultTableModel tblmodel=(DefaultTableModel)ownertable.getModel();
                 tblmodel.addRow(tbldata);

@@ -20,15 +20,14 @@ create table if not exists admin_table
 (admin_id int NOT NULL auto_increment primary key,
 first_name varchar(10),
 last_name varchar(10),
-admin_user_name varchar(10) not null,
-password varchar(8));
+admin_user_name varchar(10) not null
+);
 -- owner table
 create table if not exists owner
 (owner_id int NOT NULL auto_increment primary key,
 first_name varchar(10),
 last_name varchar(10),
 owner_user_name varchar(10) not null,
-password varchar(8),
 phone bigint,
 email varchar(25));
 -- agent table
@@ -37,7 +36,6 @@ create table if not exists agent
 first_name varchar(10),
 last_name varchar(10),
 agent_user_name varchar(10) not null,
-password varchar(8),
 location varchar(10));
 -- client table
 create table if not exists client

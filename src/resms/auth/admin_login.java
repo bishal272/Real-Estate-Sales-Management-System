@@ -146,7 +146,7 @@ public class admin_login extends javax.swing.JFrame {
     private void login_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_buttonMouseClicked
         try{
 
-            String check_st="select * from login_data where user_name=? and password=? ";
+            
             String u=id_field.getText();
             if(u.isEmpty()){
                 info_message("Provide username please!","Alert!",2);
@@ -158,6 +158,7 @@ public class admin_login extends javax.swing.JFrame {
                 info_message("Provide password please!","Alert!",2);
                 return;
             }
+            String check_st="select * from admin_login_data where admin_user_name=? and password=? ";
             PreparedStatement check=conn.c.prepareStatement(check_st);//using connection variable from conn object
             check.setString(1,u);
             check.setString(2,p);

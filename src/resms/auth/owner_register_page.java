@@ -38,8 +38,10 @@ public class owner_register_page extends javax.swing.JFrame {
         last_name_field = new javax.swing.JTextField();
         user_name_field = new javax.swing.JTextField();
         pass_field = new javax.swing.JTextField();
-        location_field = new javax.swing.JTextField();
+        Phone_field = new javax.swing.JTextField();
         register_button = new javax.swing.JButton();
+        email_label = new javax.swing.JLabel();
+        email_field = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -63,7 +65,7 @@ public class owner_register_page extends javax.swing.JFrame {
         location_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         location_label.setForeground(new java.awt.Color(0, 0, 0));
         location_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        location_label.setText("Location");
+        location_label.setText("Phone No:");
 
         pass_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         pass_label.setForeground(new java.awt.Color(0, 0, 0));
@@ -83,7 +85,7 @@ public class owner_register_page extends javax.swing.JFrame {
 
         pass_field.setBackground(new java.awt.Color(255, 255, 255));
 
-        location_field.setBackground(new java.awt.Color(255, 255, 255));
+        Phone_field.setBackground(new java.awt.Color(255, 255, 255));
 
         register_button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         register_button.setText("Register");
@@ -95,33 +97,46 @@ public class owner_register_page extends javax.swing.JFrame {
             }
         });
 
+        email_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        email_label.setForeground(new java.awt.Color(0, 0, 0));
+        email_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        email_label.setText("Email Address:");
+
+        email_field.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(113, 113, 113)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(first_name_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(last_name_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(location_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(user_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pass_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(user_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(last_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(first_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(location_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(register_button, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(145, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(register_label, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(228, 228, 228))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(113, 113, 113)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(email_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(email_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(first_name_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(last_name_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(location_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(user_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pass_label, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(user_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(last_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(first_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Phone_field, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(register_button, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,9 +153,13 @@ public class owner_register_page extends javax.swing.JFrame {
                     .addComponent(last_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(location_field, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Phone_field, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(location_label, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(email_field, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email_label, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(user_name_field, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(user_label, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -150,7 +169,7 @@ public class owner_register_page extends javax.swing.JFrame {
                     .addComponent(pass_label, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(register_button, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(43, 43, 43))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -174,7 +193,9 @@ public class owner_register_page extends javax.swing.JFrame {
             String u=user_name_field.getText();
             String f=first_name_field.getText();
             String l=last_name_field.getText();
-            String lc=location_field.getText();
+            String ph=Phone_field.getText();
+            String em=email_field.getText();
+            
             if(u.isEmpty()){
                 info_message("Provide username please!","Alert!",2);
                 return;
@@ -191,15 +212,21 @@ public class owner_register_page extends javax.swing.JFrame {
                 info_message("Provide last name please!","Alert!",2);
                 return;
             }
-            if(lc.isEmpty()){
-                info_message("Provide location please!","Alert!",2);
+            if(ph.isEmpty()){
+                info_message("Provide phone no. please!","Alert!",2);
                 return;
             }
-            PreparedStatement in=conn.c.prepareStatement("insert into owner values(?,?,?,?)");
-            in.setString(1, u);
-            in.setString(2, f);
-            in.setString(3, l);
-            in.setString(4, lc);
+            if(em.isEmpty()){
+                info_message("Provide email please!","Alert!",2);
+                return;
+            }
+            String stmt="insert into owner(first_name,last_name,owner_user_name,phone,email) values(?,?,?,?,?)";
+            PreparedStatement in=conn.c.prepareStatement(stmt);
+            in.setString(1, f);
+            in.setString(2, l);
+            in.setString(3, u);
+            in.setString(4, ph);
+            in.setString(5, em);
             in.execute();
             info_message("inserted in agent table","Alert!",1);
             PreparedStatement in2=conn.c.prepareStatement("insert into owner_login_data values(?,?)");
@@ -234,12 +261,14 @@ public class owner_register_page extends javax.swing.JFrame {
        
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Phone_field;
+    private javax.swing.JTextField email_field;
+    private javax.swing.JLabel email_label;
     private javax.swing.JTextField first_name_field;
     private javax.swing.JLabel first_name_label;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField last_name_field;
     private javax.swing.JLabel last_name_label;
-    private javax.swing.JTextField location_field;
     private javax.swing.JLabel location_label;
     private javax.swing.JTextField pass_field;
     private javax.swing.JLabel pass_label;

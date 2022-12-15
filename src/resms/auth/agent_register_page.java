@@ -195,11 +195,12 @@ public class agent_register_page extends javax.swing.JFrame {
                 info_message("Provide location please!","Alert!",2);
                 return;
             }
-            PreparedStatement in=conn.c.prepareStatement("insert into agent values(?,?,?,?)");
-            in.setString(1, u);
-            in.setString(2, f);
-            in.setString(3, l);
-            in.setString(4, lc);
+            String stmt="insert into agent(first_name,last_name,agent_user_name,location) values(?,?,?,?)";
+            PreparedStatement in=conn.c.prepareStatement(stmt);
+            in.setString(1,f);
+            in.setString(2,l);
+            in.setString(3,u);
+            in.setString(4,lc);
             in.execute();
             info_message("inserted in agent table","Alert!",1);
             PreparedStatement in2=conn.c.prepareStatement("insert into agent_login_data values(?,?)");
