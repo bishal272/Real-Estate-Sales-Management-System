@@ -3,6 +3,7 @@
 
 This project is made to manage Real Estate sales.
 Full user authentication as either admin, agent or owner.
+Relational Database implemented using mysql to maintain the data of agents, owners, admin, login data, appointments relation, assigned agent relation.
 
 Privilages distributed as follows:
 
@@ -12,6 +13,7 @@ Admin
 - Add new admins
 - Edit properties, and images
 - assign clients to agents
+- assign properties to agents
 - Edit clients
 
 Agent
