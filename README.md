@@ -13,11 +13,13 @@ Admin
 - Edit properties, and images
 - assign clients to agents
 - Edit clients
+
 Agent
 - Add new properties
 - Add new Owners
 - Look at his appointments
 - see the client list
+
 Owner
 - Add new properties
 - Add new properties images
