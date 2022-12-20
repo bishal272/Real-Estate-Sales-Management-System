@@ -14,7 +14,7 @@ Admin
 - Edit properties, and images
 - assign clients to agents
 - assign properties to agents
-- Edit clients
+- Add new or edit clients
 
 Agent
 - Add new properties
