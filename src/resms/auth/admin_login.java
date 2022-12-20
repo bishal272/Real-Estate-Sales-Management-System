@@ -30,7 +30,7 @@ public class admin_login extends javax.swing.JFrame {
         pass_label = new javax.swing.JLabel();
         login_button = new javax.swing.JButton();
         pass_field = new javax.swing.JTextField();
-        id_field = new javax.swing.JTextField();
+        un_field = new javax.swing.JTextField();
         title_label = new javax.swing.JLabel();
         back_button = new javax.swing.JButton();
 
@@ -42,7 +42,7 @@ public class admin_login extends javax.swing.JFrame {
         id_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         id_label.setForeground(new java.awt.Color(0, 0, 0));
         id_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        id_label.setText("Login");
+        id_label.setText("Username");
 
         pass_label.setBackground(new java.awt.Color(0, 0, 0));
         pass_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -61,8 +61,8 @@ public class admin_login extends javax.swing.JFrame {
 
         pass_field.setBackground(new java.awt.Color(255, 255, 255));
 
-        id_field.setBackground(new java.awt.Color(255, 255, 255));
-        id_field.setName(""); // NOI18N
+        un_field.setBackground(new java.awt.Color(255, 255, 255));
+        un_field.setName(""); // NOI18N
 
         title_label.setBackground(new java.awt.Color(0, 0, 0));
         title_label.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -97,7 +97,7 @@ public class admin_login extends javax.swing.JFrame {
                                     .addComponent(id_label, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(63, 63, 63)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(id_field)
+                                    .addComponent(un_field)
                                     .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(91, 91, 91)
@@ -114,7 +114,7 @@ public class admin_login extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(id_field, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(un_field, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(id_label, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,7 +147,7 @@ public class admin_login extends javax.swing.JFrame {
         try{
 
             
-            String u=id_field.getText();
+            String u=un_field.getText();
             if(u.isEmpty()){
                 info_message("Provide username please!","Alert!",2);
                 return;
@@ -201,12 +201,12 @@ public class admin_login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_button;
-    private javax.swing.JTextField id_field;
     private javax.swing.JLabel id_label;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JButton login_button;
     private javax.swing.JTextField pass_field;
     private javax.swing.JLabel pass_label;
     private javax.swing.JLabel title_label;
+    private javax.swing.JTextField un_field;
     // End of variables declaration//GEN-END:variables
 }

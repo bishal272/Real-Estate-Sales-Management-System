@@ -228,7 +228,7 @@ public class owner_register_page extends javax.swing.JFrame {
             in.setString(4, ph);
             in.setString(5, em);
             in.execute();
-            info_message("inserted in agent table","Alert!",1);
+            info_message("inserted in owner table","Alert!",1);
             PreparedStatement in2=conn.c.prepareStatement("insert into owner_login_data values(?,?)");
             in2.setString(1, u);
             in2.setString(2, p);
@@ -236,10 +236,11 @@ public class owner_register_page extends javax.swing.JFrame {
             info_message("inserted in login_data table","Alert!",1);
             info_message("Registered Successfully","Success",1);
             setVisible(false);
-            new admin_login().setVisible(true);
+            new owner_login().setVisible(true);
         }
         catch(SQLException ex){
-             System.out.println(ex);
+             if(ex instanceof SQLIntegrityConstraintViolationException)
+                JOptionPane.showMessageDialog(null,"username is used","alert",JOptionPane.WARNING_MESSAGE);
         }
         
         

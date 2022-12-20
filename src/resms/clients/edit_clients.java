@@ -21,6 +21,7 @@ public class edit_clients extends javax.swing.JFrame {
     /**
      * Creates new form owner_page
      */
+    mysqlcon conn=new mysqlcon();
     public edit_clients() {
         initComponents();
         showTable();
@@ -167,7 +168,7 @@ public class edit_clients extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    mysqlcon conn=new mysqlcon();
+    
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         try{
             String em=email_field.getText();
@@ -191,7 +192,7 @@ public class edit_clients extends javax.swing.JFrame {
                 info_message("Provide email please!","Alert!",2);
                 return;
             }
-            PreparedStatement in=conn.c.prepareStatement("insert into owner(first_name,last_name,phone,email) values(?,?,?,?)");
+            PreparedStatement in=conn.c.prepareStatement("insert into client(first_name,last_name,phone,email) values(?,?,?,?)");
             in.setString(1, f);
             in.setString(2, l);
             in.setString(3, p);
@@ -221,7 +222,7 @@ public class edit_clients extends javax.swing.JFrame {
     private void showTable(){
         try{
             Statement st=conn.c.createStatement();
-            ResultSet rs=st.executeQuery("select * from ");
+            ResultSet rs=st.executeQuery("select * from client");
             while(rs.next()){
                 String id=rs.getString("client_id");
                 String f=rs.getString("first_name");

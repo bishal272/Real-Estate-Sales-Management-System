@@ -194,9 +194,9 @@ public class admin_register_page extends javax.swing.JFrame {
             String stmt="insert into admin_table(first_name,last_name,admin_user_name) values(?,?,?)";
             PreparedStatement in=conn.c.prepareStatement(stmt);
             
-            in.setString(2, f);
-            in.setString(3, l);
-            in.setString(1, u);
+            in.setString(1, f);
+            in.setString(2, l);
+            in.setString(3, u);
             in.execute();
             info_message("inserted in admin table","Alert!",1);
             PreparedStatement in2=conn.c.prepareStatement("insert into admin_login_data values(?,?)");
@@ -209,7 +209,8 @@ public class admin_register_page extends javax.swing.JFrame {
             new admin_login().setVisible(true);
         }
         catch(SQLException ex){
-             System.out.println(ex);
+             if(ex instanceof SQLIntegrityConstraintViolationException)
+                JOptionPane.showMessageDialog(null,"username is used","alert",JOptionPane.WARNING_MESSAGE);
         }
         
         

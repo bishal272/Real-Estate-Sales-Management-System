@@ -8,7 +8,7 @@ import resms.agent.assigned_properties;
 import resms.clients.client_list;
 import resms.clients.edit_clients;
 import resms.property.property_images;//import package.file_name
-import resms.owner.owner_add;
+import resms.owner.edit_owner;
 import resms.property.Listed_properties;
 
 /**
@@ -183,7 +183,7 @@ public class agent_main_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        new owner_add().setVisible(true);
+        new edit_owner().setVisible(true);
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked

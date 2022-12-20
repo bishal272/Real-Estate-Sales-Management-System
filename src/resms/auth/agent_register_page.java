@@ -213,7 +213,8 @@ public class agent_register_page extends javax.swing.JFrame {
             new admin_login().setVisible(true);
         }
         catch(SQLException ex){
-             System.out.println(ex);
+             if(ex instanceof SQLIntegrityConstraintViolationException)
+                JOptionPane.showMessageDialog(null,"username is used","alert",JOptionPane.WARNING_MESSAGE);
         }
         
         

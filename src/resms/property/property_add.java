@@ -247,7 +247,7 @@ public class property_add extends javax.swing.JFrame {
             String d=description_field.getText();
             
             
-            PreparedStatement in=conn.c.prepareStatement("insert into property(type,owner_id,location,bathroom,bedrooms,balcony,garage,description) values(?,?,?,?,?,?,?,?)");
+            PreparedStatement in=conn.c.prepareStatement("insert into property(p_type,owner_id,address,bathrooms,bedrooms,balcony,garage,description) values(?,?,?,?,?,?,?,?)");
             in.setString(1,t);
             in.setInt(2,id);
             in.setString(3,l);
@@ -263,9 +263,10 @@ public class property_add extends javax.swing.JFrame {
                info_message("not updated error","alert",2);
            
        }
-       catch(NumberFormatException | SQLException e){
-           System.out.println(e);
-       }
+       catch(SQLException ex){
+             if(ex instanceof SQLIntegrityConstraintViolationException)
+                JOptionPane.showMessageDialog(null,"owner does not exist!","alert",JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked

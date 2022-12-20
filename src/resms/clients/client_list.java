@@ -16,6 +16,7 @@ public class client_list extends javax.swing.JFrame {
     /**
      * Creates new form Listed_properties
      */
+    mysqlcon conn= new mysqlcon();
     public client_list() {
         
         initComponents();
@@ -34,7 +35,7 @@ public class client_list extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        p_table = new javax.swing.JTable();
+        c_table = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -49,7 +50,7 @@ public class client_list extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setForeground(new java.awt.Color(153, 255, 255));
 
-        p_table.setModel(new javax.swing.table.DefaultTableModel(
+        c_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -57,8 +58,8 @@ public class client_list extends javax.swing.JFrame {
                 "first name", "last name", "phone", "email"
             }
         ));
-        p_table.setEnabled(false);
-        jScrollPane1.setViewportView(p_table);
+        c_table.setEnabled(false);
+        jScrollPane1.setViewportView(c_table);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
@@ -140,14 +141,22 @@ public class client_list extends javax.swing.JFrame {
         new edit_clients().setVisible(true);
     }//GEN-LAST:event_add_newMouseClicked
 
-    mysqlcon conn= new mysqlcon();
+    
     
     private void showTable() {
         try{
         Statement st=conn.c.createStatement();
-        ResultSet rs=st.executeQuery("select * from ");
+        ResultSet rs=st.executeQuery("select * from client");
         while(rs.next()){
+            String id=rs.getString("client_id");
+            String f = rs.getString("first_name");
+            String l = rs.getString("last_name");
+            String ph = rs.getString("phone");
+            String em = rs.getString("email");
             
+            String tbl[]={id,f,l,ph,em};
+            DefaultTableModel tbmodel=(DefaultTableModel)c_table.getModel();
+            tbmodel.addRow(tbl);
         }
         }
         catch(Exception e){
@@ -164,6 +173,7 @@ public class client_list extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_new;
+    private javax.swing.JTable c_table;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel5;
@@ -171,6 +181,5 @@ public class client_list extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTable p_table;
     // End of variables declaration//GEN-END:variables
 }

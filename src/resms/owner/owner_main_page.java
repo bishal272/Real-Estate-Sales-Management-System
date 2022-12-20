@@ -8,7 +8,7 @@ import resms.*;
 import resms.clients.edit_clients;
 import resms.property.property_images;//import package.file_name
 import resms.property.property_add;
-import resms.owner.owner_add;
+import resms.owner.edit_owner;
 
 /**
  *

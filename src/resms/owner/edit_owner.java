@@ -7,6 +7,7 @@ package resms.owner;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -16,12 +17,12 @@ import resms.mysqlcon;
  *
  * @author b54u
  */
-public class owner_add extends javax.swing.JFrame {
+public class edit_owner extends javax.swing.JFrame {
 
     /**
      * Creates new form owner_page
      */
-    public owner_add() {
+    public edit_owner() {
         initComponents();
         showTable();
         setLocationRelativeTo(null);
@@ -252,7 +253,8 @@ public class owner_add extends javax.swing.JFrame {
             
         }
         catch(SQLException ex){
-             System.out.println(ex);
+            if(ex instanceof SQLIntegrityConstraintViolationException)
+                JOptionPane.showMessageDialog(null,"username is used","alert",JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_jButton3MouseClicked
   public void info_message(String message, String title,int c){
@@ -285,9 +287,10 @@ public class owner_add extends javax.swing.JFrame {
             System.out.println(e);
         }
     }
+    
     public static void main(String args[]) {
         
-                new owner_add().setVisible(true);
+                new edit_owner().setVisible(true);
             }
       
 

@@ -4,6 +4,7 @@
  */
 package resms.property;
 import java.sql.*;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import resms.admin_mgmt_page;
 import resms.mysqlcon;
@@ -149,10 +150,10 @@ public class Listed_properties extends javax.swing.JFrame {
         ResultSet rs=st.executeQuery("select * from property");
         while(rs.next()){
             String p_id=rs.getString("p_id");
-            String type=rs.getString("type");
+            String type=rs.getString("p_type");
             String owner_id=rs.getString("owner_id");
-            String location=rs.getString("location");
-            String bathroom=rs.getString("bathroom");
+            String location=rs.getString("address");
+            String bathroom=rs.getString("bathrooms");
             String bedroom=rs.getString("bedrooms");
             String balcony=rs.getString("balcony");
             String garage=rs.getString("garage");
@@ -166,6 +167,7 @@ public class Listed_properties extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e);
         }
+       
         
     }
     

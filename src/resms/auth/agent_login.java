@@ -35,7 +35,7 @@ public class agent_login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         id_label = new javax.swing.JLabel();
-        id_field = new javax.swing.JTextField();
+        un_field = new javax.swing.JTextField();
         pass_label = new javax.swing.JLabel();
         pass_field = new javax.swing.JTextField();
         login_button = new javax.swing.JButton();
@@ -54,10 +54,10 @@ public class agent_login extends javax.swing.JFrame {
         id_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         id_label.setForeground(new java.awt.Color(0, 0, 0));
         id_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        id_label.setText("Agent ID");
+        id_label.setText("Username");
 
-        id_field.setBackground(new java.awt.Color(255, 255, 255));
-        id_field.setName(""); // NOI18N
+        un_field.setBackground(new java.awt.Color(255, 255, 255));
+        un_field.setName(""); // NOI18N
 
         pass_label.setBackground(new java.awt.Color(0, 0, 0));
         pass_label.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -98,7 +98,7 @@ public class agent_login extends javax.swing.JFrame {
                             .addComponent(id_label, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(63, 63, 63)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(id_field)
+                            .addComponent(un_field)
                             .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(77, 77, 77)
@@ -119,7 +119,7 @@ public class agent_login extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(id_field, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(un_field, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(id_label, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -151,8 +151,8 @@ public class agent_login extends javax.swing.JFrame {
     private void login_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_login_buttonMouseClicked
         try{
 
-            String check_st="select * from agent_login_data where agent_id=? and password=? ";
-            String u=id_field.getText();
+            String check_st="select * from agent_login_data where agent_user_name=? and password=? ";
+            String u=un_field.getText();
             if(u.isEmpty()){
                 info_message("Provide username please!","Alert!",2);
                 return;
@@ -234,12 +234,12 @@ public void info_message(String message, String title,int c){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_button1;
-    private javax.swing.JTextField id_field;
     private javax.swing.JLabel id_label;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login_button;
     private javax.swing.JTextField pass_field;
     private javax.swing.JLabel pass_label;
+    private javax.swing.JTextField un_field;
     // End of variables declaration//GEN-END:variables
 }
